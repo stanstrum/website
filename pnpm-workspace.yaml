@@ -4,3 +4,5 @@ packages:
 allowBuilds:
   '@tailwindcss/oxide': true
   esbuild: true
+nodeVersion: 24.16.0
+engineStrict: true

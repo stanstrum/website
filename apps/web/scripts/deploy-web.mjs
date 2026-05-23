@@ -9,7 +9,7 @@ const CHECK_IF_WE_HAVE = [
   ["git", "--version"],
   ["rsync", "--version"],
   // ["mktemp", "--version"],
-  ["rm", "--version"],
+  // ["rm", "--version"],
   ["!", "[ ]"],
 ];
 
@@ -156,7 +156,9 @@ async function main() {
     const { stdout } = await execAndFormat("git status --porcelain");
 
     if (!stdout) {
-      throw new Error("No changes are present");
+      comment("No changes are present.  Goodbye!");
+
+      return;
     };
   };
 

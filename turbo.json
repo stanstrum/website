@@ -5,7 +5,6 @@
     "deploy": {
       "dependsOn": ["web#build"],
       "inputs": ["scripts/**", "build/**"],
-      "outputs": ["static-repository/"],
     },
     "build": {
       "dependsOn": ["^build"],

@@ -2,10 +2,16 @@
   "$schema": "https://turborepo.dev/schema.json",
   "ui": "tui",
   "tasks": {
+    "deploy": {
+      "dependsOn": ["web#build"],
+      "inputs": ["scripts/**", "build/**"],
+      "outputs": ["static-repository/"],
+    },
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".svelte-kit/**", ".vercel/**", "dist/**"]
+      "inputs": ["!scripts/**", "$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".svelte-kit/**", ".vercel/**", "build/**"],
+      "outputLogs": "new-only"
     },
     "lint": {
       "dependsOn": ["^lint"]

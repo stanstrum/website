@@ -13,7 +13,7 @@
 		<div
 			class="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-blue-400"
 		>
-			Error {page.status}
+			Error 404
 		</div>
 
 		<h1

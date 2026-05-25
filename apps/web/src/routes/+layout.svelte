@@ -23,9 +23,7 @@
 	<main
 		class="flex-1 bg-linear-to-b from-slate-900 via-slate-950 to-black text-white"
 	>
-		<section class="mx-auto flex min-h-full max-w-5xl items-center px-6 py-24">
-			{@render children()}
-		</section>
+		{@render children()}
 	</main>
 </div>
 

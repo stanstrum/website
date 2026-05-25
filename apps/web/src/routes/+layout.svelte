@@ -15,6 +15,9 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
+<!-- to force-generate the 404 route -->
+<link href="/404" />
+
 <div class="flex min-h-screen flex-col">
 	<nav>
 		<Navbar />

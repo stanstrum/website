@@ -11,7 +11,10 @@ const config = {
 		prerender: {
 			handleHttpError: 'warn'
 		},
-	}
+		paths: {
+			relative: false,
+		},
+	},
 };
 
 export default config;

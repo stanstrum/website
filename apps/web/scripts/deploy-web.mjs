@@ -15,7 +15,7 @@ async function main() {
   let starting_working_dir = process.cwd();
   console.log(`Starting working dir is ${starting_working_dir}`);
 
-  const { test, git, rsync, pwd } = await ensureCommands();
+  const { test, git, rsync, pwd, rm, mv } = await ensureCommands();
 
   // comment("ls for good measure");
   // await spawnAndFormat("ls --color=always");
@@ -85,6 +85,29 @@ async function main() {
 
   comment("Make sure .git is still around");
   await test.existsDir(`${REPO_DIR}/.git`);
+
+  // We have to do some fixing to make 404.html appear where GitHub Pages wants it
+  comment(`Find out if 404/index.html is generated`);
+
+  try {
+    const error_folder = REPO_DIR + "/404";
+    const index_html = error_folder + "/index.html";
+    const dest = REPO_DIR + "/404.html";
+
+    await test.existsDir(error_folder);
+    await test.existsFile(index_html);
+
+    comment(`Make sure ${dest} doesn't exist`);
+    await test.notExists(dest);
+
+    comment("Move it to where it belongs -- this is entirely bespoke");
+    await mv.run({ sources: [index_html], dest });
+
+    comment("Clean up empty directory");
+    await rm.emptyDir(error_folder);
+  } catch  {
+    throw new Error("404/index.html does not exist");
+  };
 
   {
     comment("Make sure changes were applied");

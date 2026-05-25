@@ -21,6 +21,10 @@ const test = {
   ensure: () => ({ args: ["--version"] }),
 
   existsDir: directory => ({ args: ["-d", directory] }),
+  existsFile: file => ({ args: ["-f", file] }),
+
+  notExists: path => ({ args: ["!", "-e", path] }),
+
   strcmp: (a, b) => ({ args: [a, "=", b] }),
 };
 
@@ -36,11 +40,26 @@ const pwd = {
   run: (cwd = undefined) => ({ args: [], cwd }),
 };
 
+const rm = {
+  ensure: () => ({ args: ["--version"] }),
+
+  emptyDir: directory => ({ args: ["-dv", directory] }),
+  file: file => ({ args: ["-v", file] }),
+};
+
+const mv = {
+  ensure: () => ({ args: ["--version"] }),
+
+  run: ({ sources, dest }) => ({ args: ["-v", ...sources, dest ] }),
+};
+
 const CONFIGURATIONS = {
   git,
   test,
   rsync,
   pwd,
+  rm,
+  mv,
 };
 
 export async function ensureCommands() {

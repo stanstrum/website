@@ -12,12 +12,12 @@
 		"404": {
 			"error": "Error {status}",
 			"header": "Página no encontrada",
-			"body": "La página que busca no existe, ha sido movada, o aún está en construcción.",
+			"body": "La página que busca no existe, ha sido movada o aún está en construcción.",
 			"go_home": "Volver al inicio"
 		},
 		"main": {
-			"header": "Mi rincón personal del internet.",
-			"body": "Creo este sitio web a compartir proyectos, escritura, experimentación, y otras cosas en que trabajo."
+			"header": "Un rincón personal del internet.",
+			"body": "Creo este sitio web a compartir proyectos, escritos, experimentación y otras cosas en que trabajo."
 		}
 	}
 }

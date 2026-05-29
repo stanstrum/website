@@ -27,7 +27,7 @@
       <div class="flex items-center justify-between">
         <a
           class="text-xl font-bold text-gray-100 md:text-2xl hover:text-blue-400 font-stretch-50%"
-          href="/"
+          href={localizeHref('/')}
         >Stan Strum</a>
         <!-- Mobile menu button -->
         <div class="flex md:hidden">

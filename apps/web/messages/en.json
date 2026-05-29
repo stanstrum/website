@@ -6,7 +6,8 @@
 		"spanish": "Spanish"
 	},
 	"navbar": {
-		"home": "Home"
+		"home": "Home",
+		"about": "Sobre mi"
 	},
 	"pages": {
 		"404": {

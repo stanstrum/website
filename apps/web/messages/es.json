@@ -6,7 +6,8 @@
 		"spanish": "Español"
 	},
 	"navbar": {
-		"home": "Inicio"
+		"home": "Inicio",
+		"about": "Sobre mi"
 	},
 	"pages": {
 		"404": {

@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { m } from "$lib/paraglide/messages";
-	import { localizeHref } from "$lib/paraglide/runtime";
+	import { localizeHref, type Locale } from "$lib/paraglide/runtime";
   import LanguageSelector from "./language-selector.svelte";
 
 	const links = [
 		{ href: localizeHref('/'), label: m["navbar.home"]() },
-		// { href: '/about', label: 'About' },
+		{ href: localizeHref('/about'), label: m["navbar.about"]() },
 		// { href: '/blog', label: 'Blog' },
 		// { href: '/contact', label: 'Contact' }
 	];

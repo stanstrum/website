@@ -1,9 +1,13 @@
 <script lang="ts">
+	import { m } from "$lib/paraglide/messages";
+	import { localizeHref } from "$lib/paraglide/runtime";
+  import LanguageSelector from "./language-selector.svelte";
+
 	const links = [
-		{ href: '/', label: 'Home' },
-		{ href: '/about', label: 'About' },
-		{ href: '/blog', label: 'Blog' },
-		{ href: '/contact', label: 'Contact' }
+		{ href: localizeHref('/'), label: m["navbar.home"]() },
+		// { href: '/about', label: 'About' },
+		// { href: '/blog', label: 'Blog' },
+		// { href: '/contact', label: 'Contact' }
 	];
 
 	// const children = $props();
@@ -26,10 +30,12 @@
           href="/"
         >Stan Strum</a>
         <!-- Mobile menu button -->
-        <div onclick={toggleNavbar} class="flex md:hidden">
+        <div class="flex md:hidden">
           <button
             type="button"
             class="text-gray-100 hover:text-gray-400 focus:outline-none focus:text-gray-400"
+            onclick={toggleNavbar}
+            title="Toggle navbar"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -72,6 +78,8 @@
             Sign Up
           </a>
         </div> -->
+
+        <LanguageSelector />
       </div>
     </nav>
   </div>

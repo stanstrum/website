@@ -1,4 +1,23 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from en!"
+	"hello_world": "Hello, {name} from en!",
+	"locales": {
+		"english": "English",
+		"spanish": "Spanish"
+	},
+	"navbar": {
+		"home": "Home"
+	},
+	"pages": {
+		"404": {
+			"error": "Error {status}",
+			"header": "Page not found.",
+			"body": "The page you’re looking for doesn’t exist, was moved, or is still being built.",
+			"go_home": "Go home"
+		},
+		"main": {
+			"header": "A personal corner of the internet.",
+			"body": "I’m building this site to share projects, writing, experiments, and other things I’m working on."
+		}
+	}
 }

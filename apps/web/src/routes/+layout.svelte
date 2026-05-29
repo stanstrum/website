@@ -6,7 +6,7 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 
-	import Navbar from "./Navbar/index.svelte";
+	import Navbar from "$lib/navbar/index.svelte";
 
 	let { children } = $props();
 </script>

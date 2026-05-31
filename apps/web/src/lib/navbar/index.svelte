@@ -5,7 +5,7 @@
 
 	const links = [
 		{ href: localizeHref('/'), label: m["navbar.home"]() },
-		{ href: localizeHref('/about'), label: m["navbar.about"]() },
+		// { href: localizeHref('/about'), label: m["navbar.about"]() },
 		// { href: '/blog', label: 'Blog' },
 		// { href: '/contact', label: 'Contact' }
 	];

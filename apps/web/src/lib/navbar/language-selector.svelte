@@ -4,11 +4,11 @@
 
   let isEnglish = $state(getLocale() === "en");
 
-  const localToUse = (isEnglish: boolean): Locale => isEnglish ? "en" : "es";
+  const localeToUse = (isEnglish: boolean): Locale => isEnglish ? "en" : "es";
 
-  const toggleLanguage = () => {
+  const toggleLanguage = async () => {
     isEnglish = !isEnglish;
-    setLocale(localToUse(isEnglish), { reload: true });
+    await setLocale(localeToUse(isEnglish));
   };
 </script>
 
